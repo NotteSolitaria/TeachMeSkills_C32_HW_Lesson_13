@@ -8,12 +8,12 @@ public class Authorization {
 
     static Scanner scanner = new Scanner(System.in);
 
-    public static String Login() {
+    public static String login() {
         System.out.println("Enter login:");
         return scanner.nextLine();
     }
 
-    public static String Password() throws WrongPasswordException {
+    public static String password() throws WrongPasswordException {
 
         System.out.println("Enter password:");
         String password = scanner.nextLine();
@@ -28,7 +28,7 @@ public class Authorization {
         }
     }
 
-    public static int SelectingMethod() {
+    public static int selectingMethod() {
         System.out.println("Select verification method:");
 
         int methodChoose = scanner.nextInt();
@@ -37,7 +37,7 @@ public class Authorization {
             return methodChoose;
         } else {
             System.out.println("Incorrect choice of method.");
-            return SelectingMethod();
+            return selectingMethod();
         }
     }
 }

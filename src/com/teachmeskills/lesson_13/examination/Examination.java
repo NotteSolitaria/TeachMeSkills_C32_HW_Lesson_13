@@ -29,10 +29,10 @@ public class Examination {
 
     public static void resultOFChecking() throws WrongLoginException, WrongPasswordException {
 
-        String login = Authorization.Login();
-        String password = Authorization.Password();
+        String login = Authorization.login();
+        String password = Authorization.password();
 
-        int method = Authorization.SelectingMethod();
+        int method = Authorization.selectingMethod();
 
         boolean isLoginValid = (method == 1) ? checkForLogin(login) : checkForLogin2(login);
 
